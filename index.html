@@ -7,7 +7,7 @@
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body class="bg-white font-sans text-[#4a4a4a]">
+    <body class="bg-white font-sans text-(--clr-dark-gray)">
         <header
             class="h-16 flex items-center justify-center sticky top-0 bg-white"
         >
@@ -71,7 +71,7 @@
         </header>
         <main>
             <section
-                class="hero bg-[#dbdbdb] flex flex-col md:flex-row md:px-6 md:py-8 md:items-center md:gap-6"
+                class="hero bg-(--clr-light-gray-200) flex flex-col md:flex-row md:px-6 md:py-8 md:items-center md:gap-6"
             >
                 <img
                     src="./images/banner.jpg"
@@ -92,103 +92,320 @@
                     </p>
                     <a
                         href=""
-                        class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2 md:bg-[#4a4a4a] md:font-normal"
+                        class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2 md:bg-(--clr-dark-gray) md:font-normal"
                         >Start here</a
                     >
                 </article>
             </section>
-            <section class="information p-4 grid grid-cols-1 gap-16 pb-8">
-                <article class="info__card flex flex-col lg:flex-row">
-                    <div class="img__loader">
-                        <img
-                            class="md:hidden"
-                            src="./images/information-orientation-mobile.jpg"
-                            alt="Orientation date image"
-                        />
-                        <img
-                            class="hidden md:block"
-                            src="./images/information-orientation.jpg"
-                            alt="Orientation date image"
-                        />
-                    </div>
-                    <div class="card__text flex flex-col gap-2 p-4">
-                        <h3 class="text-lg font-bold">Oreintation date</h3>
-                        <p class="text-sm">Tue 10/11 & Wed 10/12: 8am-3pm</p>
-                        <a class="text-[#4a90e2] font-medium text-sm" href=""
-                            >Read more</a
-                        >
-                    </div>
+            <section
+                class="information grid grid-cols-1 md:grid-cols-(--info-md-cols)"
+            >
+                <article
+                    class="hidden md:block col-span-1 py-8 px-6 border-r-1 border-gray-200"
+                >
+                    <img
+                        class="mb-8"
+                        src="./images/information-main.jpg"
+                        alt="A guy reading a book"
+                    />
+                    <h2 class="text-3xl font-bold mb-6">
+                        It doesn't hurt to keep pracicing
+                    </h2>
+                    <p class="mb-8">
+                        Curabitur vitae libero in ipusm porttitor consequat.
+                        Aliquam et commodo lectus, nec consequat neque. Sed non
+                        accumsan urna. Phasellus sed consequat ex. Etiam eget
+                        magna laoreet, efficitur dolor consequat, tristique
+                        ligula
+                    </p>
+                    <p class="font-medium">
+                        Emanual, Sr Strategist at Hiring.com
+                    </p>
                 </article>
-                <article class="info__card flex flex-col md:flex-row">
-                    <div class="img__loader">
-                        <img
-                            class="md:hidden"
-                            src="./images/information-campus-mobile.jpg"
-                            alt="Our campas"
-                        />
-                        <img
-                            class="hidden md:block"
-                            src="./images/information-campus.jpg"
-                            alt="Our campas"
-                        />
-                    </div>
-                    <div class="card__text flex flex-col gap-2 p-4">
-                        <h3 class="text-lg font-bold">Our campus</h3>
-                        <p class="text-sm">Find which campus is close by you</p>
-                        <a class="text-[#4a90e2] font-medium text-sm" href=""
-                            >Read more</a
+                <div class="cols-span-1 grid row-auto pb-8">
+                    <article
+                        class="info__card flex flex-col p-4 pb-8 md:items-center md:flex-row md:border-y-1 md:border-gray-200 hover:bg-(--clr-light-gray-200)"
+                    >
+                        <div class="img__loader md:w-[35%] h-auto">
+                            <img
+                                class="md:hidden"
+                                src="./images/information-orientation-mobile.jpg"
+                                alt="Orientation date image"
+                            />
+                            <img
+                                class="hidden md:block"
+                                src="./images/information-orientation.jpg"
+                                alt="Orientation date image"
+                            />
+                        </div>
+                        <div
+                            class="card__text flex flex-col gap-2 p-4 md:w-[65%]"
                         >
-                    </div>
-                </article>
-                <article class="info__card flex flex-col md:flex-row">
-                    <div class="img__loader">
-                        <img
-                            class="md:hidden"
-                            src="./images/information-guest-lecture-mobile.jpg"
-                            alt="Lecture"
-                        />
-                        <img
-                            class="hidden md:block"
-                            src="./images/information-guest-lecture.jpg"
-                            alt="Lecture"
-                        />
-                    </div>
-                    <div class="card__text flex flex-col gap-2 p-4">
-                        <h3 class="text-lg font-bold">Special guest lecture</h3>
-                        <p class="text-sm">
-                            Join a keynote with Oliver Sack about music in
-                            medical treatment
-                        </p>
-                        <a class="text-[#4a90e2] font-medium text-sm" href=""
-                            >Read more</a
+                            <h3 class="text-lg font-bold">Oreintation date</h3>
+                            <p class="text-sm">
+                                Tue 10/11 & Wed 10/12: 8am-3pm
+                            </p>
+                            <a
+                                class="text-[#4a90e2] font-medium text-sm"
+                                href=""
+                                >Read more</a
+                            >
+                        </div>
+                    </article>
+                    <article
+                        class="info__card flex flex-col p-4 py-8 md:items-center md:flex-row md:border-y-1 md:border-gray-200 hover:bg-(--clr-light-gray-200)"
+                    >
+                        <div class="img__loader md:w-[35%] h-auto">
+                            <img
+                                class="md:hidden"
+                                src="./images/information-campus-mobile.jpg"
+                                alt="Our campas"
+                            />
+                            <img
+                                class="hidden md:block"
+                                src="./images/information-campus.jpg"
+                                alt="Our campas"
+                            />
+                        </div>
+                        <div
+                            class="card__text flex flex-col gap-2 p-4 md:w-[65%]"
                         >
-                    </div>
-                </article>
+                            <h3 class="text-lg font-bold">Our campus</h3>
+                            <p class="text-sm">
+                                Find which campus is close by you
+                            </p>
+                            <a
+                                class="text-[#4a90e2] font-medium text-sm"
+                                href=""
+                                >Read more</a
+                            >
+                        </div>
+                    </article>
+                    <article
+                        class="info__card flex flex-col p-4 pt-8 pb-0 md:items-center md:flex-row md:border-y-1 md:border-gray-200 hover:bg-(--clr-light-gray-200)"
+                    >
+                        <div class="img__loader md:w-[35%] h-auto">
+                            <img
+                                class="md:hidden"
+                                src="./images/information-guest-lecture-mobile.jpg"
+                                alt="Lecture"
+                            />
+                            <img
+                                class="hidden md:block"
+                                src="./images/information-guest-lecture.jpg"
+                                alt="Lecture"
+                            />
+                        </div>
+                        <div
+                            class="card__text flex flex-col gap-2 p-4 pb-0 md:w-[65%]"
+                        >
+                            <h3 class="text-lg font-bold">
+                                <span class="inline md:hidden">Special</span
+                                ><span class="hidden md:inline">Our</span> guest
+                                lecture
+                            </h3>
+                            <p class="text-sm">
+                                Join a keynote with Oliver Sack about music in
+                                medical treatment
+                            </p>
+                            <a
+                                class="text-[#4a90e2] font-medium text-sm"
+                                href=""
+                                >Read more</a
+                            >
+                        </div>
+                    </article>
+                </div>
             </section>
-            <section class="course px-4 py-8">
-                <h2 class="text-semibold text-3xl text-center font-bold mb-4">
+            <section
+                class="course px-4 py-8 md:bg-(--clr-light-gray-100) md:px-[72px] border-1 border-gray-100"
+            >
+                <h2
+                    class="text-semibold text-3xl text-center font-bold mb-4 md:mb-8"
+                >
                     Start learning
                 </h2>
-                <ul class="grid grid-cols-1 gap-2 font-semibold">
-                    <li class="p-4 pb-6 bg-[#d8d8d8]">Software engineering</li>
-                    <li class="p-4 pb-6 bg-[#d8d8d8]">Computer art</li>
-                    <li class="p-4 pb-6 bg-[#d8d8d8]">Design</li>
-                    <li class="p-4 pb-6 bg-[#d8d8d8]">Data</li>
-                    <li class="p-4 pb-6 bg-[#d8d8d8]">Business</li>
-                    <li class="p-4 pb-6 bg-[#d8d8d8]">Marketing</li>
+                <ul
+                    class="grid grid-cols-1 gap-2 font-light text-(--clr-dark-gray) md:grid-cols-3 md:gap-8 max-w-[860px] mx-auto"
+                >
+                    <li class="bg-(--clr-light-gray-200) md:bg-white">
+                        <img
+                            src="./images/course-software.jpg"
+                            class="hidden md:block"
+                            alt="Software engineering"
+                        />
+                        <div class="p-4 md:pb-6 flex flex-col gap-2">
+                            <h3 class="md:text-xl font-medium md:font-bold">
+                                Software engineering
+                            </h3>
+
+                            <p class="hidden md:block uppercase">Courses</p>
+                            <p class="hidden md:block">
+                                Web Development, Mobile Development, iOT, APIs
+                            </p>
+                        </div>
+                    </li>
+                    <li class="bg-(--clr-light-gray-200) md:bg-white">
+                        <img
+                            src="./images/course-computer-art.jpg"
+                            class="hidden md:block"
+                            alt="Computer art"
+                        />
+                        <div class="p-4 md:pb-6 flex flex-col gap-2">
+                            <h3 class="md:text-xl font-medium md:font-bold">
+                                Computer art
+                            </h3>
+                            <p class="hidden md:block uppercase">Courses</p>
+                            <p class="hidden md:block">
+                                Imaging & Design, Web Design, Motion Graphics &
+                                Visual Effects, Computer Animation
+                            </p>
+                        </div>
+                    </li>
+                    <li class="bg-(--clr-light-gray-200) md:bg-white">
+                        <img
+                            src="./images/course-design.jpg"
+                            class="hidden md:block"
+                            alt="Design"
+                        />
+                        <div class="p-4 md:pb-6 flex flex-col gap-2">
+                            <h3 class="md:text-xl font-medium md:font-bold">
+                                Design
+                            </h3>
+                            <p class="hidden md:block uppercase">Courses</p>
+                            <p class="hidden md:block">
+                                User Experience Design, User Research, Visual
+                                Design
+                            </p>
+                        </div>
+                    </li>
+                    <li class="bg-(--clr-light-gray-200) md:bg-white">
+                        <img
+                            src="./images/course-data.jpg"
+                            class="hidden md:block"
+                            alt="Data"
+                        />
+                        <div class="p-4 md:pb-6 flex flex-col gap-2">
+                            <h3 class="md:text-xl font-medium md:font-bold">
+                                Data
+                            </h3>
+                            <p class="hidden md:block uppercase">Courses</p>
+                            <p class="hidden md:block">
+                                Data Science, Big Data, SQL, Data Visualization
+                            </p>
+                        </div>
+                    </li>
+                    <li class="bg-(--clr-light-gray-200) md:bg-white">
+                        <img
+                            src="./images/course-business.jpg"
+                            class="hidden md:block"
+                            alt="Business"
+                        />
+                        <div class="p-4 md:pb-6 flex flex-col gap-2">
+                            <h3 class="md:text-xl font-medium md:font-bold">
+                                Business
+                            </h3>
+                            <p class="hidden md:block uppercase">Courses</p>
+                            <p class="hidden md:block">
+                                Product Development, Business Development,
+                                Startup
+                            </p>
+                        </div>
+                    </li>
+                    <li class="bg-(--clr-light-gray-200) md:bg-white">
+                        <img
+                            src="./images/course-marketing.jpg"
+                            class="hidden md:block"
+                            alt="Marketing"
+                        />
+                        <div class="p-4 md:pb-6 flex flex-col gap-2">
+                            <h3 class="md:text-xl font-medium md:font-bold">
+                                Marketing
+                            </h3>
+                            <p class="hidden md:block uppercase">Courses</p>
+                            <p class="hidden md:block">
+                                Analytics, Content Marketing, Mobile Marketing
+                            </p>
+                        </div>
+                    </li>
                 </ul>
             </section>
-            <section class="thesis px-4 pt-8 pb-6">
-                <h2 class="text-semibold text-3xl text-center font-bold mb-4">
+            <section
+                class="information grid grid-cols-1 md:grid-cols-(--info-md-cols)"
+            >
+                <h2
+                    class="col-span-2 text-center text-3xl md:text-4xl font-bold pt-8 pb-4 md:pb-8"
+                >
                     Thesis exhibits
                 </h2>
-                <video src="./videos/thesis.mp4" autoplay muted controls>
-                    Video is Unavailable
-                </video>
+                <article class="col-span-1 md:px-6">
+                    <video src="./videos/thesis.mp4" controls class="mb-6">
+                        Videos is Unvailable
+                    </video>
+                    <h2 class="hidden md:block text-3xl font-bold mb-2">
+                        Reimagine Urban
+                    </h2>
+                    <p class="hidden md:block mb-8">
+                        "Curabitur vitae libero in ipsum porttitor consequat.
+                        Aliquam et commodo lectus, nec consequat neque. Sed non
+                        accumsan urna. Phasellus sed consequat ex. Etiam eget
+                        manga laoreet, efficitur dolor consequat, tristique
+                        ligula."
+                    </p>
+                </article>
+                <div class="hidden md:block cols-span-1">
+                    <article
+                        class="info__card flex flex-col p-4 max-h-max md:items-center md:flex-row hover:bg-(--clr-light-gray-200)"
+                    >
+                        <div class="img__loader md:w-[35%]">
+                            <img
+                                class="hidden md:block"
+                                src="./images/thesis-fisma.jpg"
+                                alt="Fisma: Design and Prototype"
+                            />
+                        </div>
+                        <div
+                            class="card__text flex flex-col gap-2 px-4 w-[65%]"
+                        >
+                            <h3 class="text-lg font-bold">
+                                Fisma: Design and Prototype
+                            </h3>
+                            <p class="text-sm">
+                                Designer showcase of new prototype product
+                            </p>
+                        </div>
+                    </article>
+                    <article
+                        class="info__card flex flex-col p-4 max-h-max md:items-center md:flex-row hover:bg-(--clr-light-gray-200)"
+                    >
+                        <div class="img__loader md:w-[35%]">
+                            <img
+                                class="hidden md:block"
+                                src="./images/thesis-now-and-then.jpg"
+                                alt="Now and Then"
+                            />
+                        </div>
+                        <div
+                            class="card__text flex flex-col gap-2 px-4 w-[65%] mt-[-1rem]"
+                        >
+                            <h3 class="text-lg font-bold">Now and Then</h3>
+                            <p class="text-sm">Research study about New York</p>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
-        <footer class="text-xs p-4">
-            <p>&copy; 2016 Colmar Academy. All right reserved</p>
+        <footer class="text-xs pb-4 md:pb-12 px-6 md:text-base">
+            <hr
+                class="hidden md:block w-full h-[1px] px-4 text-gray-200 mb-4"
+            />
+            <div class="footer__text flex md:justify-between">
+                <p>&copy; 2016 Colmar Academy. All right reserved</p>
+                <div class="footer__nav flex justify-between">
+                    <a href="" class="hidden md:inline-block mr-4">Terms</a>
+                    <a href="" class="hidden md:inline-block">Privacy</a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
