@@ -8,118 +8,175 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body class="bg-white font-sans text-[#4a4a4a]">
-        <header class="h-16 flex items-center justify-center">
+        <header
+            class="h-16 flex items-center justify-center sticky top-0 bg-white"
+        >
             <nav class="w-full">
-                <ul class="flex justify-around">
-                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
-                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
-                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
-                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
+                <ul class="flex justify-evenly md:justify-between md:px-6">
+                    <li
+                        class="flex justify-center items-center md:justify-start md:flex-1"
+                    >
+                        <a class="flex items-center" href="#"
+                            ><img
+                                class="flex-1"
+                                src="./images/ic-logo.svg"
+                                alt="Colmar logo"
+                            />
+                            <p class="uppercase hidden md:block font-bold">
+                                Colmar
+                                <span
+                                    class="ml-[-4px] text-[#a5a5a5] font-normal"
+                                    >Academy</span
+                                >
+                            </p></a
+                        >
+                    </li>
+                    <li class="flex justify-center items-center">
+                        <a href="#">
+                            <img
+                                class="flex-1 md:hidden"
+                                src="./images/ic-on-campus.svg"
+                                alt="Colmar logo"
+                            />
+                            <p class="hidden md:block mr-4">On campus</p>
+                        </a>
+                    </li>
+                    <li class="flex justify-center items-center">
+                        <a href="#"
+                            ><img
+                                class="flex-1 md:hidden"
+                                src="./images/ic-online.svg"
+                                alt="Colmar logo"
+                            />
+                            <p class="hidden md:block mr-4">Online</p></a
+                        >
+                    </li>
+                    <li class="justify-center items-center hidden md:flex mr-4">
+                        <a href="#"> <p class="">or companies</p></a>
+                    </li>
+                    <li class="flex justify-center items-center">
+                        <a href="#"
+                            ><img
+                                class="flex-1 md:hidden"
+                                src="./images/ic-login.svg"
+                                alt="Colmar logo"
+                            />
+                            <p class="hidden md:block">Sign in</p></a
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
-        <section class="hero bg-[#dbdbdb]">
-            <img src="./images/banner.jpg" alt="" />
-            <article class="p-4 py-8 flex flex-col gap-6">
-                <h2 class="text-3xl font-extrabold mb-[0.5rem]">
-                    Learn something new every day
-                </h2>
-                <p class="font-bold">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                    href=""
-                    class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2"
-                    >Start here</a
-                >
-            </article>
-        </section>
-        <section class="information p-4 grid grid-cols-1 gap-16 pb-8">
-            <article class="info__card flex flex-col lg:flex-row">
-                <div class="img__loader">
-                    <img
-                        class="lg:hidden"
-                        src="./images/information-orientation-mobile.jpg"
-                        alt="Orientation date image"
-                    />
-                    <img
-                        class="hidden lg:block"
-                        src="./images/information-orientation.jpg"
-                        alt="Orientation date image"
-                    />
-                </div>
-                <div class="card__text flex flex-col gap-2 p-4">
-                    <h3 class="text-lg font-bold">Oreintation date</h3>
-                    <p class="text-sm">Tue 10/11 & Wed 10/12: 8am-3pm</p>
-                    <a class="text-[#4a90e2] font-medium text-sm" href=""
-                        >Read more</a
-                    >
-                </div>
-            </article>
-            <article class="info__card flex flex-col lg:flex-row">
-                <div class="img__loader">
-                    <img
-                        class="lg:hidden"
-                        src="./images/information-campus-mobile.jpg"
-                        alt="Our campas"
-                    />
-                    <img
-                        class="hidden lg:block"
-                        src="./images/information-campus.jpg"
-                        alt="Our campas"
-                    />
-                </div>
-                <div class="card__text flex flex-col gap-2 p-4">
-                    <h3 class="text-lg font-bold">Our campus</h3>
-                    <p class="text-sm">Find which campus is close by you</p>
-                    <a class="text-[#4a90e2] font-medium text-sm" href=""
-                        >Read more</a
-                    >
-                </div>
-            </article>
-            <article class="info__card flex flex-col lg:flex-row">
-                <div class="img__loader">
-                    <img
-                        class="lg:hidden"
-                        src="./images/information-guest-lecture-mobile.jpg"
-                        alt="Lecture"
-                    />
-                    <img
-                        class="hidden lg:block"
-                        src="./images/information-guest-lecture.jpg"
-                        alt="Lecture"
-                    />
-                </div>
-                <div class="card__text flex flex-col gap-2 p-4">
-                    <h3 class="text-lg font-bold">Special guest lecture</h3>
-                    <p class="text-sm">
-                        Join a keynote with Oliver Sack about music in medical
-                        treatment
+        <main>
+            <section class="hero bg-[#dbdbdb]">
+                <img src="./images/banner.jpg" alt="" />
+                <article class="p-4 py-8 flex flex-col gap-6">
+                    <h2 class="text-3xl font-extrabold mb-[0.5rem]">
+                        Learn something new every day
+                    </h2>
+                    <p class="font-bold">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
                     </p>
-                    <a class="text-[#4a90e2] font-medium text-sm" href=""
-                        >Read more</a
+                    <a
+                        href=""
+                        class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2"
+                        >Start here</a
                     >
-                </div>
-            </article>
-        </section>
-        <section class="course px-4 py-8">
-            <h2 class="text-semibold text-3xl text-center font-bold mb-4">
-                Start learning
-            </h2>
-            <ul class="grid grid-cols-1 gap-2 font-semibold">
-                <li class="p-4 pb-6 bg-[#d8d8d8]">Software engineering</li>
-                <li class="p-4 pb-6 bg-[#d8d8d8]">Computer art</li>
-                <li class="p-4 pb-6 bg-[#d8d8d8]">Design</li>
-                <li class="p-4 pb-6 bg-[#d8d8d8]">Data</li>
-                <li class="p-4 pb-6 bg-[#d8d8d8]">Business</li>
-                <li class="p-4 pb-6 bg-[#d8d8d8]">Marketing</li>
-            </ul>
-        </section>
-        <section class="thesis px-4 py-8">
-            <h2 class="text-semibold text-3xl text-center font-bold mb-4">
-                Thesis exhibits
-            </h2>
-            <video src="./videos/thesis.mp4" autoplay muted controls></video>
-        </section>
+                </article>
+            </section>
+            <section class="information p-4 grid grid-cols-1 gap-16 pb-8">
+                <article class="info__card flex flex-col lg:flex-row">
+                    <div class="img__loader">
+                        <img
+                            class="md:hidden"
+                            src="./images/information-orientation-mobile.jpg"
+                            alt="Orientation date image"
+                        />
+                        <img
+                            class="hidden md:block"
+                            src="./images/information-orientation.jpg"
+                            alt="Orientation date image"
+                        />
+                    </div>
+                    <div class="card__text flex flex-col gap-2 p-4">
+                        <h3 class="text-lg font-bold">Oreintation date</h3>
+                        <p class="text-sm">Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                        <a class="text-[#4a90e2] font-medium text-sm" href=""
+                            >Read more</a
+                        >
+                    </div>
+                </article>
+                <article class="info__card flex flex-col md:flex-row">
+                    <div class="img__loader">
+                        <img
+                            class="md:hidden"
+                            src="./images/information-campus-mobile.jpg"
+                            alt="Our campas"
+                        />
+                        <img
+                            class="hidden md:block"
+                            src="./images/information-campus.jpg"
+                            alt="Our campas"
+                        />
+                    </div>
+                    <div class="card__text flex flex-col gap-2 p-4">
+                        <h3 class="text-lg font-bold">Our campus</h3>
+                        <p class="text-sm">Find which campus is close by you</p>
+                        <a class="text-[#4a90e2] font-medium text-sm" href=""
+                            >Read more</a
+                        >
+                    </div>
+                </article>
+                <article class="info__card flex flex-col md:flex-row">
+                    <div class="img__loader">
+                        <img
+                            class="md:hidden"
+                            src="./images/information-guest-lecture-mobile.jpg"
+                            alt="Lecture"
+                        />
+                        <img
+                            class="hidden md:block"
+                            src="./images/information-guest-lecture.jpg"
+                            alt="Lecture"
+                        />
+                    </div>
+                    <div class="card__text flex flex-col gap-2 p-4">
+                        <h3 class="text-lg font-bold">Special guest lecture</h3>
+                        <p class="text-sm">
+                            Join a keynote with Oliver Sack about music in
+                            medical treatment
+                        </p>
+                        <a class="text-[#4a90e2] font-medium text-sm" href=""
+                            >Read more</a
+                        >
+                    </div>
+                </article>
+            </section>
+            <section class="course px-4 py-8">
+                <h2 class="text-semibold text-3xl text-center font-bold mb-4">
+                    Start learning
+                </h2>
+                <ul class="grid grid-cols-1 gap-2 font-semibold">
+                    <li class="p-4 pb-6 bg-[#d8d8d8]">Software engineering</li>
+                    <li class="p-4 pb-6 bg-[#d8d8d8]">Computer art</li>
+                    <li class="p-4 pb-6 bg-[#d8d8d8]">Design</li>
+                    <li class="p-4 pb-6 bg-[#d8d8d8]">Data</li>
+                    <li class="p-4 pb-6 bg-[#d8d8d8]">Business</li>
+                    <li class="p-4 pb-6 bg-[#d8d8d8]">Marketing</li>
+                </ul>
+            </section>
+            <section class="thesis px-4 pt-8 pb-6">
+                <h2 class="text-semibold text-3xl text-center font-bold mb-4">
+                    Thesis exhibits
+                </h2>
+                <video src="./videos/thesis.mp4" autoplay muted controls>
+                    Video is Unavailable
+                </video>
+            </section>
+        </main>
+        <footer class="text-xs p-4">
+            <p>&copy; 2016 Colmar Academy. All right reserved</p>
+        </footer>
     </body>
 </html>
