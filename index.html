@@ -4,8 +4,100 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>13-kob-colmar</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
-        <h1>13-kob-colmar</h1>
+    <body class="bg-white font-sans text-[#4a4a4a]">
+        <header class="h-16 flex items-center justify-center">
+            <nav class="w-full">
+                <ul class="flex justify-around">
+                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
+                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
+                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
+                    <li class="w-8 h-8 rounded-full bg-gray-300"></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero bg-[#dbdbdb]">
+            <img src="./images/banner.jpg" alt="" />
+            <article class="p-4 py-8 flex flex-col gap-6">
+                <h2 class="text-3xl font-extrabold mb-[0.5rem]">
+                    Learn something new every day
+                </h2>
+                <p class="font-bold">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <a
+                    href=""
+                    class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2"
+                    >Start here</a
+                >
+            </article>
+        </section>
+        <section class="information p-4 grid grid-cols-1 gap-16">
+            <article class="info__card flex flex-col lg:flex-row">
+                <div class="img__loader">
+                    <img
+                        class="lg:hidden"
+                        src="./images/information-orientation-mobile.jpg"
+                        alt="Orientation date image"
+                    />
+                    <img
+                        class="hidden lg:block"
+                        src="./images/information-orientation.jpg"
+                        alt="Orientation date image"
+                    />
+                </div>
+                <div class="card__text flex flex-col gap-2 p-4">
+                    <h3 class="text-lg font-bold">Oreintation date</h3>
+                    <p class="text-sm">Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                    <a class="text-[#4a90e2] font-medium text-sm" href=""
+                        >Read more</a
+                    >
+                </div>
+            </article>
+            <article class="info__card flex flex-col lg:flex-row">
+                <div class="img__loader">
+                    <img
+                        class="lg:hidden"
+                        src="./images/information-campus-mobile.jpg"
+                        alt="Our campas"
+                    />
+                    <img
+                        class="hidden lg:block"
+                        src="./images/information-campus.jpg"
+                        alt="Our campas"
+                    />
+                </div>
+                <div class="card__text flex flex-col gap-2 p-4">
+                    <h3 class="text-lg font-bold">Our campus</h3>
+                    <p class="text-sm">Find which campus is close by you</p>
+                    <a class="text-[#4a90e2] font-medium text-sm" href=""
+                        >Read more</a
+                    >
+                </div>
+            </article>
+            <article class="info__card flex flex-col lg:flex-row">
+                <div class="img__loader">
+                    <img
+                        class="lg:hidden"
+                        src="./images/information-guest-lecture-mobile.jpg"
+                        alt="Lecture"
+                    />
+                    <img
+                        class="hidden lg:block"
+                        src="./images/information-guest-lecture.jpg"
+                        alt="Orientation date image"
+                    />
+                </div>
+                <div class="card__text flex flex-col gap-2 p-4">
+                    <h3 class="text-lg font-bold">Oreintation date</h3>
+                    <p class="text-sm">Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                    <a class="text-[#4a90e2] font-medium text-sm" href=""
+                        >Read more</a
+                    >
+                </div>
+            </article>
+        </section>
     </body>
 </html>
