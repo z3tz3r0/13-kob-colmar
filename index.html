@@ -18,14 +18,16 @@
                     >
                         <a class="flex items-center" href="#"
                             ><img
-                                class="flex-1"
+                                class="flex-1 md:h-10"
                                 src="./images/ic-logo.svg"
                                 alt="Colmar logo"
                             />
-                            <p class="uppercase hidden md:block font-bold">
+                            <p
+                                class="uppercase hidden md:block font-bold text-xl ml-4"
+                            >
                                 Colmar
                                 <span
-                                    class="ml-[-4px] text-[#a5a5a5] font-normal"
+                                    class="ml-[-5px] text-[#a5a5a5] font-normal"
                                     >Academy</span
                                 >
                             </p></a
@@ -68,19 +70,29 @@
             </nav>
         </header>
         <main>
-            <section class="hero bg-[#dbdbdb]">
-                <img src="./images/banner.jpg" alt="" />
-                <article class="p-4 py-8 flex flex-col gap-6">
-                    <h2 class="text-3xl font-extrabold mb-[0.5rem]">
+            <section
+                class="hero bg-[#dbdbdb] flex flex-col md:flex-row md:px-6 md:py-8 md:items-center md:gap-6"
+            >
+                <img
+                    src="./images/banner.jpg"
+                    alt="Hero banner"
+                    class="md:w-3/5"
+                />
+                <article
+                    class="p-4 py-8 flex flex-col gap-6 md:px-0 md:pr-12 lg:pr-22"
+                >
+                    <h2
+                        class="text-3xl font-extrabold mb-[0.5rem] md:text-3xl lg:text-4xl md:font-bold"
+                    >
                         Learn something new every day
                     </h2>
-                    <p class="font-bold">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                    <p class="font-bold text-base md:text- lg:text-2xl">
+                        Lorem, ipsum dolor sit amet, consectetur adipisicing
                         elit.
                     </p>
                     <a
                         href=""
-                        class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2"
+                        class="block w-full text-center bg-[#9b9b9b] font-bold text-white py-2 md:bg-[#4a4a4a] md:font-normal"
                         >Start here</a
                     >
                 </article>
